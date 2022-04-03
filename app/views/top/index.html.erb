@@ -1,4 +1,5 @@
 <h1>Top#index</h1>
-<%= link_to "登録はこちらから",new_user_registration_path,class: "btn btn-primary"%>
-<%= link_to "ログインはこちらから",new_user_session_path,class: "btn btn-primary"%>
-<%= link_to "ログアウトはこちらから",destroy_user_session_path, method: :delete %>
+<%= link_to "運営団体はこちらから",new_vol_group_session_path,class: "btn btn-primary"%>
+<%= link_to "個人利用者はこちらから",new_user_session_path,class: "btn btn-primary"%>
+<%= link_to "ログアウト",destroy_user_session_path, method: :delete %>
+<%= link_to "運営団体のログアウト",destroy_vol_group_session_path, method: :delete %>
