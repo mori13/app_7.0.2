@@ -1,8 +1,6 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  host = 'localhost:3000'# 開発環境でメールを送るためのホストの設定（Railsチュートリアル11章）
-  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
@@ -40,6 +38,8 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_url_options = { host: 'localhost3000'}# 開発環境でメールを送るためのホストの設定
+  config.action_mailer.delivery_method = :sendmail #←これがないとメールが送れない
 
   config.action_mailer.perform_caching = false
 
